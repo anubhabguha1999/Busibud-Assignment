@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <title>Busibud Assignment</title>
+  </head>
+  <style>
+    .icon {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+
+    .nav-item {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .wave {
+      position: relative;
+    }
+
+    .wave-overlay {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      margin-top: 250px;
+      height: 269px;
+      background-image: url(img/wave.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 2;
+    }
+
+    .Hero_img {
+      position: relative;
+      z-index: 1;
+    }
+
+    .Hero_div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .heading {
+      margin-left: 40px;
+      margin-top: 90px;
+    }
+
+    .heading h2 {
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .heading p {
+      margin-top: 25px;
+    }
+
+    .Hero_img {
+      display: flex;
+      justify-content: center;
+    }
+
+    .Hero_img_size {
+      width: 509px;
+      height: 518px;
+    }
+
+    .section_2 {
+      background-color: #f3f4f5;
+      height: 800px;
+    }
+
+    .btn_price {
+      position: absolute;
+      z-index: 3;
+      background: #1492e6 0% 0% no-repeat padding-box;
+      box-shadow: 0px 16px 48px #00000029;
+      border-radius: 33px;
+      opacity: 1;
+      margin-top: 50px;
+      width: 247px;
+      height: 65px;
+      font-size: 25px;
+      border-style: none;
+      color: white;
+    }
+
+    .content_sec2 h1 {
+      text-align: center;
+      padding-top: 80px;
+      font-size: 35px;
+    }
+
+    .card {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 19px;
+      opacity: 1;
+      width: 308px;
+      height: 320px;
+    }
+
+    .card-text {
+      font-size: 18px;
+    }
+
+    .col_1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .heading_3 h1 {
+      text-align: center;
+      margin-top: 150px;
+      font-size: 35px;
+      margin-bottom: 0;
+    }
+
+    .wave_2 {
+      position: relative;
+    }
+
+    .wave-overlay_2 {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      background-color: #f3f4f5;
+      height: 269px;
+      background-image: url(img/wave_2.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 2;
+    }
+
+    .main_div {
+      position: relative;
+      z-index: 3;
+    }
+
+    .grid_3 {
+      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 40px;
+      padding-left: 80px;
+      font-size: 18px;
+      padding-top: 80px;
+    }
+
+    .grid_3 p {
+      margin-top: 40px;
+    }
+
+    .grid_3_p {
+      font-weight: 500;
+    }
+
+    .heading_4 h1 {
+      text-align: center;
+      margin-top: 140px;
+      margin-bottom: 80px;
+      font-size: 35px;
+    }
+
+    .img_text_grid {
+      display: grid;
+      grid-template-columns: repeat(1, 75px 300px);
+      align-items: center;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .img_text_grid p {
+      font-size: 24px;
+    }
+
+    .info_content {
+      margin: 30px 80px;
+      height: 250px;
+    }
+
+    .info_text {
+      width: 644px;
+      height: 56px;
+      text-align: left;
+      letter-spacing: 0px;
+      color: #000000;
+      margin-top: 10px;
+      font-size: 21px;
+    }
+
+    .btn_margin {
+      margin-top: 25px;
+    }
+
+    .right_div {
+      float: right;
+    }
+
+    .left_div {
+      float: left;
+    }
+
+    .Main_content {
+      width: 1097px;
+      height: 363px;
+      background: #f8fafc 0% 0% no-repeat padding-box;
+      box-shadow: 0px 16px 48px #00000029;
+      border-radius: 42px;
+      opacity: 1;
+    }
+
+    .grid_4 {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .img_text_grid_2 {
+      display: grid;
+      grid-template-columns: repeat(1, 75px 300px);
+      font-size: 24px;
+      margin: 45px;
+      align-items: end;
+      font-weight: 700;
+      text-align: center;
+      justify-content: start;
+      align-content: center;
+      justify-items: start;
+    }
+
+    .img_text_grid_2 img {
+      width: 64px;
+      height: 63px;
+    }
+
+    .center_div {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: space-around;
+      margin: 95px;
+      gap: 30px;
+    }
+
+    .color {
+      width: 284px;
+      height: 263px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 16px 48px #00000029;
+      border-radius: 30px;
+      opacity: 1;
+    }
+
+    .img_star_grid {
+      display: grid;
+      grid-template-columns: 170px auto;
+      justify-items: end;
+      margin: 20px;
+    }
+
+    .star {
+      width: 14px;
+      height: 13px;
+    }
+
+    .grid_5 {
+      display: grid;
+      grid-template-columns: 42px 120px;
+      gap: 5px;
+    }
+
+    .text_grid {
+      display: grid;
+      grid-template-rows: 20px 20px;
+      font-size: 13px;
+    }
+
+    .p1 {
+      font-size: 13px;
+      text-align: left;
+      margin: 25px;
+    }
+
+    .heading_5 {
+      text-align: center;
+      margin-top: 200px;
+      font-size: 35px;
+      margin-bottom: 142px;
+    }
+
+    .grid_6 {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: space-around;
+      margin-top: 70px;
+      align-items: center;
+    }
+
+    .grid_6 p {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .footer {
+      background: #000000 0% 0% no-repeat padding-box;
+      opacity: 1;
+      width: 1280px;
+      height: 369px;
+      color: white;
+      display: grid;
+      align-items: end;
+      justify-content: space-around;
+    }
+
+    footer {
+      display: flex;
+      margin-bottom: 52px;
+      gap: 10px;
+    }
+
+    footer img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .w_h {
+      width: 471px;
+      height: 56px;
+    }
+
+    .h {
+      height: 1350px;
+    }
+
+    .he2 {
+      height: 700px;
+    }
+    
+    @media only screen and (max-width: 480px) {
+      .Hero_div {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .Hero_content {
+        position: absolute;
+        z-index: 4;
+      }
+
+      .Hero_img_size {
+        width: 375px;
+        height: 500px;
+        opacity: 0.6;
+      }
+
+      .wave-overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        margin-top: 400px;
+        height: 269px;
+        background-image: url(img/wave.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 2;
+      }
+
+      .content_sec2 h1 {
+        text-align: center;
+        padding-top: 300px;
+        font-size: 35px;
+      }
+
+      .section_2 {
+        background-color: #f3f4f5;
+        height: auto;
+      }
+
+      .card {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 19px;
+        opacity: 1;
+        width: 308px;
+        height: auto;
+      }
+
+      .grid_3 {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 40px;
+        padding-left: 80px;
+        font-size: 18px;
+        padding-top: 90px;
+      }
+
+      .img_text_grid {
+        display: grid;
+        text-align: center;
+        grid-template-columns: none;
+        font-size: 24px;
+        font-weight: 700;
+        align-content: stretch;
+        justify-items: center;
+      }
+
+      .info_text {
+        width: 250px;
+        height: auto;
+        text-align: left;
+        letter-spacing: 0px;
+        color: #000000;
+        margin-top: 10px;
+        font-size: 21px;
+      }
+
+      .info_content {
+        margin: 30px 80px;
+        height: auto;
+        margin-top: 150px;
+      }
+
+      .right_div {
+        float: none;
+      }
+      .left_div {
+        float: none;
+      }
+
+      .h {
+        height: auto;
+      }
+
+      .he2 {
+        height: auto;
+        margin-top: 200px;
+      }
+
+      .Main_content {
+        height: auto;
+        width: 342px;
+      }
+
+      .img_text_grid_2 {
+        display: grid;
+        grid-template-columns: none;
+        font-size: 24px;
+        margin: 45px;
+        align-items: end;
+        font-weight: 700;
+        text-align: center;
+        justify-content: space-around;
+        align-content: center;
+        justify-items: center;
+      }
+
+      .center_div {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        justify-content: space-around;
+        margin: 95px;
+        gap: 30px;
+      }
+
+      .grid_6 {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        justify-content: space-around;
+        margin-top: 70px;
+        align-items: center;
+        row-gap: 90px;
+      }
+
+      .footer {
+        background: #000000 0% 0% no-repeat padding-box;
+        opacity: 1;
+        width: auto;
+        height: 369px;
+        color: white;
+        display: grid;
+        align-items: end;
+        justify-content: space-around;
+      }
+    }
+
+    @media only screen and (max-width: 830px) {
+    }
+
+    @media only screen and (min-width: 992px) {
+    }
+  </style>
+  <body>
+    <div class="icon">
+      <img src="image/logo.png" alt="" />
+    </div>
+    <nav class="navbar navbar-expand-lg border-bottom border-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Nav1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nav2</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Nav3
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdownItems" href="#">Action</a></li>
+                <li><a class="dropdownItems" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdownItems" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Nav4
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdownItems" href="#">Action</a></li>
+                <li><a class="dropdownItems" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdownItems" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nav5</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nav6</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nav7</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nav8</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="wave">
+      <div class="wave-overlay"></div>
+      <div class="Hero_div">
+        <div class="Hero_content">
+          <div class="heading">
+            <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam
+              obcaecati maiores expedita accusamus ullam veritatis illum
+              exercitationem vitae corrupti maxime, perspiciatis voluptate,
+              delectus esse aliquid? Non dicta repellendus ut.
+            </p>
+            <button class="btn_price">Check Pricing</button>
+          </div>
+        </div>
+        <div class="Hero_img">
+          <img class="Hero_img_size" src="image/Hero_img.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="section_2">
+      <div class="content_sec2">
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 m-5">
+          <div class="col col_1">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Lorem ipsum dolor sit .</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Assumenda quo itaque eum aliquam provident modi cupiditate
+                  nostrum. Alias sed suscipit ut voluptate tenetur itaque nobis
+                  quae laboriosam nemo veritatis, rem accusantium non.
+                  Obcaecati, unde!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col col_1">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Lorem ipsum dolor sit .</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                  aliquam, quod dolorem molestias debitis deleniti tenetur
+                  expedita ipsam labore laboriosam aspernatur quo fuga ex.
+                  Maiores natus aliquid nemo recusandae architecto.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col col_1">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Lorem ipsum dolor sit .</h5>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Tempora necessitatibus blanditiis sint excepturi quis fugit
+                  accusamus, maxime laudantium voluptate. Vel itaque optio
+                  dolorem totam quibusdam architecto iure facilis voluptas
+                  distinctio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="heading_3">
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
+      </div>
+    </section>
+
+    <section class="wave_2">
+      <div class="wave-overlay_2"></div>
+      <div class="grid_3">
+        <div class="main_div">
+          <img src="image/img_3.png" alt="" />
+          <p class="grid_3_p">Lorem ipsum dolor sit .</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+            commodo est. Pellentesque eu placerat mauris. Etiam ut maximus ante.
+            Suspendisse varius dolor nec bibendum dignissim. Proin in diam a
+            justo sollicitudin mattis eu sagittis nunc. In hac habitasse platea
+            dictumst.
+          </p>
+        </div>
+        <div class="main_div">
+          <img src="image/img_4.png" alt="" />
+          <p class="grid_3_p">Lorem ipsum dolor sit .</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+            commodo est. Pellentesque eu placerat mauris. Etiam ut maximus ante.
+            Suspendisse varius dolor nec bibendum dignissim. Proin in diam a
+            justo sollicitudin mattis eu sagittis nunc. In hac habitasse platea
+            dictumst.
+          </p>
+        </div>
+        <div class="main_div">
+          <img src="image/img_5.png" alt="" width="244" height="188" />
+          <p class="grid_3_p">Lorem ipsum dolor sit .</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+            commodo est. Pellentesque eu placerat mauris. Etiam ut maximus ante.
+            Suspendisse varius dolor nec bibendum dignissim. Proin in diam a
+            justo sollicitudin mattis eu sagittis nunc. In hac habitasse platea
+            dictumst.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="h">
+      <div class="heading_4">
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
+      </div>
+      <div class="info_content">
+        <div class="img_text_grid">
+          <img src="image/img_6.png" alt="" />
+          <p>Lorem ipsum dolor sit .</p>
+        </div>
+        <p class="info_text">
+          adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris.
+          ut maximus ante. Suspendisse varius dolor nec bibendum dignissim
+        </p>
+        <button class="btn_price btn_margin">Check Pricing</button>
+      </div>
+      <div class="info_content right_div">
+        <div class="img_text_grid">
+          <img src="image/img_7.png" alt="" />
+          <p>Lorem ipsum dolor sit .</p>
+        </div>
+        <p class="info_text w_h">
+          adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris.
+          ut maximus ante. Suspendisse
+        </p>
+        <button class="btn_price btn_margin">Check Pricing</button>
+      </div>
+      <div class="info_content left_div">
+        <div class="img_text_grid">
+          <img src="image/img_8.png" alt="" />
+          <p>Lorem ipsum dolor sit .</p>
+        </div>
+        <p class="info_text">
+          adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris.
+          ut maximus ante. Suspendisse varius dolor nec bibendum dignissim
+        </p>
+        <button class="btn_price btn_margin">Check Pricing</button>
+      </div>
+      <div class="info_content right_div">
+        <div class="img_text_grid">
+          <img src="image/img_9.png" alt="" />
+          <p>Lorem ipsum dolor sit .</p>
+        </div>
+        <p class="info_text w_h">
+          adipiscing elit. Ut sed commodo est.Pellentesque eu placerat mauris.
+          ut maximus ante. Suspendisse
+        </p>
+        <button class="btn_price btn_margin">Check Pricing</button>
+      </div>
+    </section>
+
+    <section class="he2">
+      <div class="heading_4">
+        <h1>Lorem ipsum dolor sit .</h1>
+      </div>
+      <div class="grid_4">
+        <div class="Main_content">
+          <div class="img_text_grid_2">
+            <img src="image/img_10.png" alt="" />
+            <p>Lorem ipsum dolor sit .</p>
+          </div>
+          <div class="center_div">
+            <div class="color">
+              <div class="img_star_grid">
+                <div class="grid_5">
+                  <img src="image/profile_1.png" alt="" />
+                  <div class="text_grid">
+                    <p>Jhon Doe</p>
+                    <p>CEO</p>
+                  </div>
+                </div>
+                <div class="star_grp">
+                  <img class="star" src="image/star.png" alt="" />
+                  <img class="star" src="image/star.png" alt="" />
+                  <img class="star" src="image/star.png" alt="" />
+                  <img class="star" src="image/star.png" alt="" />
+                </div>
+              </div>
+              <p class="p1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+                commodo est. Pellentesque eu placerat mauris. Etiam ut maximus
+                ante. Suspendisse varius dolor nec bibendum dignissim. Proin in
+                diam a justo sollicitudin mattis eu sagittis nunc. In hac
+                habitasse platea dictumst.
+              </p>
+            </div>
+            <div class="color">
+              <div class="img_star_grid">
+                <div class="grid_5">
+                  <img src="image/profile_2.png" alt="" />
+                  <div class="text_grid">
+                    <p>Amanda green</p>
+                    <p>Operations Manager</p>
+                  </div>
+                </div>
+                <div class="star_grp">
+                  <img class="star" src="image/star.png" alt="" />
+                  <img class="star" src="image/star.png" alt="" />
+                  <img class="star" src="image/star.png" alt="" />
+                  <img class="star" src="image/star.png" alt="" />
+                </div>
+              </div>
+              <p class="p1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+                commodo est. Pellentesque eu placerat mauris. Etiam ut maximus
+                ante. Suspendisse varius dolor nec bibendum dignissim. Proin in
+                diam a justo sollicitudin mattis eu sagittis nunc. In hac
+                habitasse platea dictumst.
+              </p>
+            </div>
+            <div class="color">
+              <div class="img_star_grid">
+                <div class="grid_5">
+                  <img src="image/profile_3.png" alt="" />
+                  <div class="text_grid">
+                    <p>Sam Cooper</p>
+                    <p>Customer Service Manager</p>
+                  </div>
+                </div>
+                <div class="star_grp">
+                  <img class="star" src="image/star.png" alt="" />
+                  <img class="star" src="image/star.png" alt="" />
+                  <img class="star" src="image/star.png" alt="" />
+                  <img class="star" src="image/star.png" alt="" />
+                </div>
+              </div>
+              <p class="p1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+                commodo est. Pellentesque eu placerat mauris. Etiam ut maximus
+                ante. Suspendisse varius dolor nec bibendum dignissim. Proin in
+                diam a justo sollicitudin mattis eu sagittis nunc. In hac
+                habitasse platea dictumst.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 189px">
+      <div class="heading_5">
+        <h1>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</h1>
+      </div>
+      <div>
+        <div class="grid_6">
+          <div class="">
+            <img src="image/img_11.png" alt="" />
+            <p style="margin-top: 20px">Forms On Fire</p>
+          </div>
+          <div class="" style="margin-bottom: 20px">
+            <img src="image/img_12.png" alt="" width="177px" height="100px" />
+            <p>ElectroNeek Studio IDE</p>
+          </div>
+          <div class="">
+            <img src="image/img_13.png" alt="" width="48px" height="47px" />
+            <p style="margin-top: 20px">Jot form</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <footer>
+        <img src="image/copyright_1.png" alt="" />
+        <p>Helplama 2021</p>
+      </footer>
+    </section>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+  <!-- <script src="script.js"></script> -->
+</html>
